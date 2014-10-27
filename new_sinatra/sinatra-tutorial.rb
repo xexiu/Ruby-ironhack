@@ -1,6 +1,10 @@
 require 'sinatra'
 
 get '/' do
-  @date = DateTime.now
   erb :index
+end
+
+post '/hello' do
+  @name = params["username"]
+  "Hello #{@name}"
 end

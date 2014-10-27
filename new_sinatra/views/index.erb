@@ -9,6 +9,10 @@
 </style>
 </head>
 <body>
-  <div class="centered"><h1><%= @date %></h1></div>
+  <div class="centered">
+    <form action="hello" method="POST">
+      Please, input your name: <input name="username" type="text" />
+    </form>
+  </div>
 </body>
 </html>
