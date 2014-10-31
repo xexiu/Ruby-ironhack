@@ -10,8 +10,15 @@
 </head>
 <body>
   <div class="centered">
+    <h1><%= @date %></h1>
+    <% while @bucle < 11 %>
+    <span>I am a <%= @bucle %></span>
+    <% @bucle += 1
+    end %>
+  </div>
+  <div class="centered">
     <form action="hello" method="POST">
-      Please, input your name: <input name="username" type="text" />
+      Please, input your name: <input name="username" type="text" autofocus="autofocus" />
     </form>
   </div>
 </body>
