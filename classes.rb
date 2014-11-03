@@ -28,3 +28,37 @@ other_car = Car.new "moook"
 
 my_car.make_sound # meek
 other_car.make_sound # mook
+
+# Inheritance
+
+class Animal
+  def initialize(name)
+    @name = name
+  end
+
+  def describe
+    puts "Its name is #{@name}"
+  end
+end
+
+class Dog < Animal
+end
+
+class Cat < Animal
+end
+
+class Human < Animal
+  def initialize(name, salary)
+    super(name)
+    @salary = salary
+  end
+
+  def describe_with_salary
+    puts "Its name is #{@name} and its salary is #{@salary}"
+  end
+end
+
+animals = [Dog.new("fluffy"), Cat.new("satan"), Human.new("perico", 12000)]
+animals.each {|animal| animal.describe}
+
+Human.new("perico", 12000).describe_with_salary
