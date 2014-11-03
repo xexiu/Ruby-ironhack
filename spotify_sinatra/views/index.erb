@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Spotify Sinatra</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <form action="songs/new" method="post" accept-charset="utf-8">
+    Enter a song name: <input type="text" name="name" value="" autofocus="autofocus">
+    Enter an artist name: <input type="text" name="artist" value="">
+    <input type="submit" name="" value="Submit">
+  </form>
+  <ul>
+    <% @@songs_list.each do | song | %>
+    <li><%= song[0] %> - <%= song[1] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
