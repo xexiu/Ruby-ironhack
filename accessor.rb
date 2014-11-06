@@ -1,8 +1,10 @@
 class Car
   attr_accessor :sound
+
   def initialize(sound)
     @sound = sound
   end
+
   def make_sound
     puts @sound
   end
